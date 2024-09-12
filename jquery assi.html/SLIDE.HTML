@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .box {
+            height: 300px;
+            background-color: gold;
+            border-radius: 20px;
+        }
+
+        button {
+            height: 50px;
+            width: 200px;
+            margin-top: 12px;
+            border: 2px solid white;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: bolder;
+            background-color: goldenrod;
+            color: brown;
+        }
+
+        button:hover {
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <button id="up">Slide Up</button>
+    <button id="down">Slide Down</button>
+    <button id="toggle">Slide Toggle</button>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+    $(document).ready(function () {
+        $("#up").click(function () {
+            $(".box").slideUp(3000)
+        })
+    })
+
+    $(document).ready(function () {
+        $("#down").click(function () {
+            $(".box").slideDown(2000)
+        })
+    })
+
+    $(document).ready(function () {
+        $("#toggle").click(function () {
+            $(".box").slideToggle(1000)
+        })
+    })
+</script>
+
+</html>

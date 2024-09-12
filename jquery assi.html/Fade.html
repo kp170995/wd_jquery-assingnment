@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-box {
+            height: 300px;
+            width: 600px;
+            border: 2px solid black;
+            margin: auto;
+            margin-top: 100px;
+            background-color: blue;
+        }
+
+        .sub-box {
+            height: 250px;
+            width: 550px;
+            background-color: aliceblue;
+            margin: 25px;
+
+        }
+
+        .boxes {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        h3 {
+            padding: 10px;
+            font-weight: light;
+        }
+
+        .boxes div {
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+        }
+
+        .box1{
+            background-image: url(pexels-pixabay-56866.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .box2{
+            background-image: url(pexels-pixabay-56866.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .box3 {
+            background-image: url(pexels-pixabay-56866.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .btn {
+            text-align: right;
+            padding: 15px 90px;
+        }
+
+        button {
+            height: 25px;
+            width: 60px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-box">
+        <div class="sub-box">
+            <h3> jQuery fadeout</h3>
+            <div class="boxes">
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+            </div>
+            <div class="btn">
+                <button>show</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $(".box1").fadeOut(3000)
+            $(".box2").fadeOut(2000)
+            $(".box3").fadeOut(1000)
+        })
+    })
+</script>
+
+</html>
